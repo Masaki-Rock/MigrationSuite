@@ -1,0 +1,14 @@
+<project name="Sample usage of Salesforce Ant tasks" default="all" basedir=".">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+    <property name="dev01_build" location="${dev01}/build.xml" />
+    <property name="it01_build" location="${it01}/build.xml" />
+    <property name="st01_build" location="${st01}/build.xml" />
+    <property name="staging01_build" location="${staging01}/build.xml" />
+    <property name="production_build" location="${production}/build.xml" />
+
+    <target name="all">
+        <ant antfile="${dev01_build}" target="all" inheritAll="false"/>
+    </target>
+</project>

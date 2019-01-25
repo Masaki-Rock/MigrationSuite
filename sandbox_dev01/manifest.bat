@@ -1,0 +1,1 @@
+java -jar ../lib/create-manifestfile-tool.jar %*
